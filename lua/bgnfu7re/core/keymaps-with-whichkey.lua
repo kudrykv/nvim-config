@@ -24,10 +24,14 @@ wk.register({
       name = '+window split',
 
       v = { '<C-w>v', 'Split Vertically' },
-      h = { '<C-w>n', 'Split horizontally' },
       n = { '<C-w>n', 'Split horizontally' },
       ['='] = { '<C-w>=', 'Set Splits to have Equal Width' },
       c = { '<C-w>c', 'Close Current Split' },
+
+      h = { '<C-w>h', 'Move to Left Split' },
+      l = { '<C-w>l', 'Move to Right Split' },
+      j = { '<C-w>j', 'Move to Bottom Split' },
+      k = { '<C-w>k', 'Move to Top Split' },
 
       -- szw/vim-maximizer
       m = { '<CMD>MaximizerToggle<CR>', 'Maximize Current Split' },

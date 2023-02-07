@@ -11,7 +11,7 @@ end
 
 local on_attach = function(buf, client)
   -- highlight all references to the symbol under the cursor
-  vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
+  vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
     pattern = { '*.go', '*.lua' },
     callback = function()
       vim.lsp.buf.clear_references()
