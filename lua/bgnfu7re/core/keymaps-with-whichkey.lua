@@ -7,11 +7,6 @@ vim.g.mapleader = ' '
 
 wk.register({
   {
-    mode = 'i',
-    ['jk'] = { '<ESC>', 'Exit from insert mode' }
-  },
-
-  {
     x = { '"_x', 'Remove one char w/o copying it' },
   },
 
@@ -48,9 +43,10 @@ wk.register({
     o = {
       name = '+open',
 
-      h = { '<CMD>:History<CR>', 'Open History' },
-      w = { '<CMD>:Windows<CR>', 'Opened Windows' },
-      b = { '<CMD>:Buffers<CR>', 'Opened Buffers' },
+      h = { '<CMD>History<CR>', 'Open History' },
+      w = { '<CMD>Windows<CR>', 'Opened Windows' },
+      b = { '<CMD>Telescope buffers<CR>', 'Opened Buffers' },
+      t = { '<CMD>Telescope help_tags<CR>', 'Help Tags' },
     },
 
     t = {
@@ -65,21 +61,26 @@ wk.register({
     i = {
       name = '+IDE-like',
 
-      i = { '<CMD>Lspsaga lsp_finder<CR>', 'LSP Finder' },
-      p = { '<CMD>Lspsaga peek_definition<CR>', 'LSP Preview Definition' },
-      g = { '<CMD>Lspsaga goto_definition<CR>', 'LSP Go to Definition' },
-      a = { '<CMD>Lspsaga code_action<CR>', 'LSP Code Action' },
-      r = { '<CMD>Lspsaga rename<CR>', 'LSP Rename' },
-      R = { '<CMD>Lspsaga rename ++project<CR>', 'LSP Rename' },
-
-      s = {
-        name = '+show',
-
-        d = { '<CMD>Lspsaga show_cursor_diagnostics ++unfocus<CR>', 'LSP Show Cursor Diagnostics' },
-        D = { '<CMD>Lspsaga show_line_diagnostics ++unfocus<CR>', 'LSP Show Line Diagnostics' },
-        o = { '<CMD>Lspsaga outline<CR>', 'LSP Outline' },
-        q = { '<CMD>Lspsaga hover_doc<CR>', 'LSP Hover Doc' },
-      },
+      h = { '<CMD>lua vim.lsp.buf.hover()<CR>', 'Hover' },
+      l = { '<CMD>lua vim.lsp.buf.format()<CR>', 'Format' },
+      r = { '<CMD>lua vim.lsp.buf.references()<CR>', 'References' },
+      i = { '<CMD>lua vim.lsp.buf.implementation()<CR>', 'Implementation' },
+      a = { '<CMD>lua vim.lsp.buf.code_action()<CR>', 'Code Action' },
+      -- i = { '<CMD>Lspsaga lsp_finder<CR>', 'LSP Finder' },
+      -- p = { '<CMD>Lspsaga peek_definition<CR>', 'LSP Preview Definition' },
+      -- g = { '<CMD>Lspsaga goto_definition<CR>', 'LSP Go to Definition' },
+      -- a = { '<CMD>Lspsaga code_action<CR>', 'LSP Code Action' },
+      -- r = { '<CMD>Lspsaga rename<CR>', 'LSP Rename' },
+      -- R = { '<CMD>Lspsaga rename ++project<CR>', 'LSP Rename' },
+      --
+      -- s = {
+      --   name = '+show',
+      --
+      --   d = { '<CMD>Lspsaga show_cursor_diagnostics ++unfocus<CR>', 'LSP Show Cursor Diagnostics' },
+      --   D = { '<CMD>Lspsaga show_line_diagnostics ++unfocus<CR>', 'LSP Show Line Diagnostics' },
+      --   o = { '<CMD>Lspsaga outline<CR>', 'LSP Outline' },
+      --   q = { '<CMD>Lspsaga hover_doc<CR>', 'LSP Hover Doc' },
+      -- },
     },
   },
 })

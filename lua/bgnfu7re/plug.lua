@@ -2,6 +2,15 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
+-- a set of lua funcs; this is a dependency for some plugins
+Plug('nvim-lua/plenary.nvim')
+
+-- telescope, a fuzzy finder
+-- a dependency for octo.nvim
+Plug('nvim-telescope/telescope.nvim', { tag = '0.1.1' })
+
+Plug('pwntester/octo.nvim')
+
 -- auto-save, captain obvious
 Plug('Pocco81/auto-save.nvim')
 
@@ -85,4 +94,6 @@ require('bgnfu7re.plugins.lsp.mason')
 require('bgnfu7re.plugins.lsp.lspsaga')
 require('bgnfu7re.plugins.lsp.lspkind')
 require('bgnfu7re.plugins.lsp.lspconfig')
+
+require('bgnfu7re.plugins.octonvim')
 
