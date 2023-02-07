@@ -9,8 +9,15 @@ if not ok then
   return
 end
 
-local on_attach = function(client, buf)
-  local opts = { noremap = true, silent = true, buffer = buf }
+local on_attach = function(buf, client)
+  -- highlight all references to the symbol under the cursor
+  vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
+    pattern = { '*.go', '*.lua' },
+    callback = function()
+      vim.lsp.buf.clear_references()
+      vim.lsp.buf.document_highlight()
+    end,
+  })
 end
 
 -- used to enable autocompletion (if we trust some youtube guy)
@@ -42,19 +49,11 @@ lspconfig['sumneko_lua'].setup({
 
 -- enable diagnostics while in insert mode
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
+  vim.lsp.diagnostic.on_publish_diagnostics,
+  {
     virtual_text = true,
     signs = true,
     underline = true,
     update_in_insert = true,
   }
 )
-
--- highlight all references to the symbol under the cursor
-vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
-  callback = function()
-    vim.lsp.buf.clear_references()
-    vim.lsp.buf.document_highlight()
-  end,
-})
-

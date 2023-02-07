@@ -2,7 +2,11 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
+-- auto-save, captain obvious
 Plug('Pocco81/auto-save.nvim')
+
+-- git integration
+Plug('tpope/vim-fugitive')
 
 -- file explorer, nice icons for it
 Plug('nvim-tree/nvim-web-devicons')
