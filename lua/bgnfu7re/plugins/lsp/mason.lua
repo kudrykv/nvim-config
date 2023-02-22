@@ -22,7 +22,7 @@ mason_lspconfig.setup({
     'jdtls',
     'tsserver',
     'ltex',
-    'sumneko_lua',
+    'lua_ls',
     'ruby_ls',
     'sqlls',
     'taplo',

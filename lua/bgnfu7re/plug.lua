@@ -2,6 +2,9 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
+-- org-like
+Plug('nvim-neorg/neorg')
+
 -- a set of lua funcs; this is a dependency for some plugins
 Plug('nvim-lua/plenary.nvim')
 
@@ -9,7 +12,11 @@ Plug('nvim-lua/plenary.nvim')
 -- a dependency for octo.nvim
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.1' })
 
+-- integration with github
 Plug('pwntester/octo.nvim')
+
+-- git blame line
+Plug('tveskag/nvim-blame-line')
 
 -- auto-save, captain obvious
 Plug('Pocco81/auto-save.nvim')
@@ -71,6 +78,9 @@ Plug('hrsh7th/cmp-path')
 Plug('hrsh7th/cmp-cmdline')
 Plug('hrsh7th/nvim-cmp')
 
+-- signature help
+Plug('ray-x/lsp_signature.nvim')
+
 -- snippets
 Plug('L3MON4D3/LuaSnip')
 Plug('saadparwaiz1/cmp_luasnip')
@@ -80,6 +90,8 @@ vim.call('plug#end')
 -- post-install setup plugins
 
 require('bgnfu7re.plugins.auto-save')
+
+require('bgnfu7re.plugins.neorg')
 
 require('bgnfu7re.plugins.nvim-tree')
 require('bgnfu7re.plugins.comment-nvim')
@@ -94,6 +106,7 @@ require('bgnfu7re.plugins.lsp.mason')
 require('bgnfu7re.plugins.lsp.lspsaga')
 require('bgnfu7re.plugins.lsp.lspkind')
 require('bgnfu7re.plugins.lsp.lspconfig')
+require('bgnfu7re.plugins.lsp.lspsignature')
 
 require('bgnfu7re.plugins.octonvim')
 
