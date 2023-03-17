@@ -52,10 +52,9 @@ wk.register({
     o = {
       name = '+open',
 
-      h = { '<CMD>History<CR>', 'Open History' },
+      h = { '<CMD>Telescope oldfiles<CR>', 'Open History' },
       w = { '<CMD>Windows<CR>', 'Opened Windows' },
       b = { '<CMD>Telescope buffers<CR>', 'Opened Buffers' },
-      t = { '<CMD>Telescope help_tags<CR>', 'Help Tags' },
     },
 
     s = {
@@ -108,6 +107,7 @@ wk.register({
         name = '+navigate',
 
         i = { '<CMD>Lspsaga goto_definition<CR>', 'LSP Go to Implementation' },
+        t = { '<CMD>Telescope lsp_type_definitions<CR>', 'LSP Go to Type Definition' },
       },
     },
   },
