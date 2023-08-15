@@ -85,6 +85,11 @@ Plug('ray-x/lsp_signature.nvim')
 Plug('L3MON4D3/LuaSnip')
 Plug('saadparwaiz1/cmp_luasnip')
 
+-- debuggers
+Plug('mfussenegger/nvim-dap')
+Plug('rcarriga/nvim-dap-ui')
+Plug('leoluz/nvim-dap-go')
+
 vim.call('plug#end')
 
 -- post-install setup plugins
@@ -109,4 +114,6 @@ require('bgnfu7re.plugins.lsp.lspconfig')
 require('bgnfu7re.plugins.lsp.lspsignature')
 
 require('bgnfu7re.plugins.octonvim')
+
+require('bgnfu7re.plugins.dap')
 
