@@ -29,6 +29,7 @@ vim.call('plug#end')
 require('bgnfu7re.plugconfig.nvim-tree')
 require('bgnfu7re.plugconfig.git-gutter')
 require('bgnfu7re.plugconfig.tree-sitter')
+require('bgnfu7re.plugconfig.telescope')
 
 -- setup after plugins were loaded
 
