@@ -15,6 +15,10 @@ Plug('airblade/vim-gitgutter')
 -- manage git
 Plug('tpope/vim-fugitive')
 
+Plug('nvim-lua/plenary.nvim') -- dependency for telescope
+Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- dependency for telescope
+Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.2' })
+
 -- theme
 Plug('sainnhe/everforest')
 
@@ -24,6 +28,7 @@ vim.call('plug#end')
 
 require('bgnfu7re.plugconfig.nvim-tree')
 require('bgnfu7re.plugconfig.git-gutter')
+require('bgnfu7re.plugconfig.tree-sitter')
 
 -- setup after plugins were loaded
 
