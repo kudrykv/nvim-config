@@ -16,7 +16,7 @@ Plug('tpope/vim-surround')
 Plug('szw/vim-maximizer')
 
 -- git highlights in the sign column
-Plug('airblade/vim-gitgutter')
+Plug('lewis6991/gitsigns.nvim')
 
 -- manage git
 Plug('tpope/vim-fugitive')
@@ -49,6 +49,9 @@ Plug('nvimdev/lspsaga.nvim')
 Plug('mfussenegger/nvim-dap')
 Plug('rcarriga/nvim-dap-ui')
 
+-- COC
+Plug('neoclide/coc.nvim', { branch = 'release' })
+
 -- theme
 Plug('sainnhe/everforest')
 
@@ -57,7 +60,7 @@ vim.call('plug#end')
 -- setup plugins
 
 require('bgnfu7re.plugconfig.nvim-tree')
-require('bgnfu7re.plugconfig.git-gutter')
+require('bgnfu7re.plugconfig.gitsigns')
 require('bgnfu7re.plugconfig.tree-sitter')
 require('bgnfu7re.plugconfig.telescope')
 require('bgnfu7re.plugconfig.code-action-menu')

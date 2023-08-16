@@ -4,8 +4,6 @@ if not ok then
 end
 
 cmp.setup({
-  mapping = {
-    ['<C-Space>'] = cmp.mapping.complete(),
-  },
+  mapping = cmp.mapping.preset,
 })
 

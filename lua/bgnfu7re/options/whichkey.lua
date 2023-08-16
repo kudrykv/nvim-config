@@ -6,8 +6,9 @@ end
 whichKey.register({
   { x = { '"_x', 'Remove one char w/o copying it' } },
 
-  { ['<M-Z>'] = { '<CMD>:GitGutterUndoHunk<CR>', 'Undo hunk' } },
-  { ['<M-z>'] = { '<CMD>:GitGutterPreviewHunk<CR>', 'Preview hunk' } },
+  { ['<M-Z>'] = { '<CMD>:Gitsigns reset_hunk<CR>', 'Undo hunk' } },
+  { ['<M-z>'] = { '<CMD>:Gitsigns preview_hunk<CR>', 'Preview hunk' } },
+  { ['å'] = { '<CMD>:Gitsigns blame_line<CR>', 'Blame line' } },
 
   { ['<M-e>'] = { '<CMD>:Telescope buffers<CR>', 'Recently edited buffers' } },
   { ['<M-O>'] = { '<CMD>:Telescope find_files<CR>', 'Find Files' } },
