@@ -73,23 +73,28 @@ vim.call('plug#end')
 
 -- setup plugins
 
-require('bgnfu7re.plugconfig.nvim-tree')
-require('bgnfu7re.plugconfig.gitsigns')
-require('bgnfu7re.plugconfig.tree-sitter')
-require('bgnfu7re.plugconfig.telescope')
-require('bgnfu7re.plugconfig.code-action-menu')
-require('bgnfu7re.plugconfig.autoclose')
-require('bgnfu7re.plugconfig.scrollbar')
-require('bgnfu7re.plugconfig.cmp')
+-- require('bgnfu7re.plugconfig.nvim-tree')
+-- require('bgnfu7re.plugconfig.gitsigns')
+-- require('bgnfu7re.plugconfig.tree-sitter')
+-- require('bgnfu7re.plugconfig.telescope')
+-- require('bgnfu7re.plugconfig.code-action-menu')
+-- require('bgnfu7re.plugconfig.autoclose')
+-- require('bgnfu7re.plugconfig.scrollbar')
+-- require('bgnfu7re.plugconfig.cmp')
 
-require('bgnfu7re.lsp.mason')
-require('bgnfu7re.lsp.saga')
+-- require('bgnfu7re.lsp.mason')
+-- require('bgnfu7re.lsp.saga')
 
-require('bgnfu7re.dap.dapui')
-require('bgnfu7re.dap.dap-go')
+-- require('bgnfu7re.dap.dapui')
+-- require('bgnfu7re.dap.dap-go')
 
 -- setup after plugins were loaded
 
-require('bgnfu7re.options.editor')
-require('bgnfu7re.options.whichkey')
+-- require('bgnfu7re.options.editor')
+-- require('bgnfu7re.options.whichkey')
 
+for _, file in ipairs(vim.api.nvim_get_runtime_file('**/bgnfu7re/load/**/*\\.lua', true)) do
+  local stripped = string.gsub(file, '.*/bgnfu7re/', 'bgnfu7re.'):gsub('%.lua$', ''):gsub('/', '.')
+
+  require(stripped)
+end
