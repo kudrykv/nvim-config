@@ -39,4 +39,14 @@ whichKey.register({
   },
 })
 
+vim.keymap.set({'n', 'i'}, '<M-p>', vim.lsp.buf.signature_help)
+vim.keymap.set({'n', 'i'}, '<M-A>', '<CMD>:Telescope commands<CR>')
 
+vim.keymap.set({'n', 'i'}, '<M-/>', '<CMD>:Commentary<CR>j')
+vim.keymap.set({'n', 'i'}, '<M-C-L>', vim.lsp.buf.format)
+
+-- option+F8
+vim.keymap.set({'n'}, '<F56>', '<CMD>:lua require"dap".toggle_breakpoint()<CR>')
+vim.keymap.set({'n'}, '<F7>', '<CMD>:lua require"dap".step_into()<CR>')
+vim.keymap.set({'n'}, '<F8>', '<CMD>:lua require"dap".step_over()<CR>')
+vim.keymap.set({'n'}, '<F9>', '<CMD>:lua require"dap".continue()<CR>')

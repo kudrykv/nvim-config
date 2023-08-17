@@ -12,6 +12,15 @@ Plug('folke/which-key.nvim')
 -- helper shortcuts for faster text surrounding (brackets, quotes, etc)
 Plug('tpope/vim-surround')
 
+-- commenter, because why do you need this out of the box, right?
+Plug('tpope/vim-commentary')
+
+-- automatic braces and quotes
+Plug('m4xshen/autoclose.nvim')
+
+-- scrollbar
+Plug('petertriho/nvim-scrollbar')
+
 -- split maximizer
 Plug('szw/vim-maximizer')
 
@@ -49,11 +58,16 @@ Plug('nvimdev/lspsaga.nvim')
 Plug('mfussenegger/nvim-dap')
 Plug('rcarriga/nvim-dap-ui')
 
+Plug('leoluz/nvim-dap-go')
+
 -- COC
-Plug('neoclide/coc.nvim', { branch = 'release' })
+-- Plug('neoclide/coc.nvim', { branch = 'release' })
 
 -- theme
 Plug('sainnhe/everforest')
+
+-- copilot
+Plug('github/copilot.vim')
 
 vim.call('plug#end')
 
@@ -64,11 +78,15 @@ require('bgnfu7re.plugconfig.gitsigns')
 require('bgnfu7re.plugconfig.tree-sitter')
 require('bgnfu7re.plugconfig.telescope')
 require('bgnfu7re.plugconfig.code-action-menu')
+require('bgnfu7re.plugconfig.autoclose')
+require('bgnfu7re.plugconfig.scrollbar')
+require('bgnfu7re.plugconfig.cmp')
 
 require('bgnfu7re.lsp.mason')
 require('bgnfu7re.lsp.saga')
 
 require('bgnfu7re.dap.dapui')
+require('bgnfu7re.dap.dap-go')
 
 -- setup after plugins were loaded
 
