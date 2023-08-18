@@ -15,6 +15,9 @@ Plug('tpope/vim-surround')
 
 -- commenter, because why do you need this out of the box, right?
 Plug('tpope/vim-commentary')
+
+-- auto-save
+Plug('Pocco81/auto-save.nvim')
 --------------------------------------------------
 
 -- UI --------------------------------------------
