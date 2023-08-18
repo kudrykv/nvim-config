@@ -26,6 +26,10 @@ Plug('szw/vim-maximizer')
 
 -- status line
 Plug('nvim-lualine/lualine.nvim')
+
+-- terminal
+-- Plug('akinsho/nvim-toggleterm.lua') -- suggested by copilot
+Plug('NvChad/nvterm')
 --------------------------------------------------
 
 -- FILE TREE --------------------------------------

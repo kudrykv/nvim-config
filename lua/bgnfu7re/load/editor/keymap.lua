@@ -1,5 +1,7 @@
 vim.keymap.set({ 'n' }, 'x', '"_x', { desc = 'Remove one char w/o copying it' })
 
+vim.keymap.set({ 'n', 't' }, '<F60>', '<CMD>:lua require("nvterm.terminal").toggle("horizontal")<CR>', { desc = 'Toggle terminal (option+F12)' })
+
 vim.keymap.set({ 'n', 'i' }, '<M-A>', '<CMD>:Telescope commands<CR>', { desc = 'List All Commands' })
 
 vim.keymap.set({ 'n' }, '<M-Z>', '<CMD>:Gitsigns reset_hunk<CR>', { desc = 'Undo hunk' })
@@ -25,7 +27,7 @@ vim.keymap.set({ 'n', 'i' }, '<M-b>', vim.lsp.buf.definition, { desc = 'Go to de
 vim.keymap.set({ 'n' }, '<M-C-O>', '<CMD>:Telescope lsp_dynamic_workspace_symbols<CR>',
   { desc = 'Search project symbols' })
 vim.keymap.set({ 'n' }, '<M-C-F7>', '<CMD>:Lspsaga finder<CR>', { desc = 'Find references and implementation' })
-vim.keymap.set({ 'n' }, '<F60>', '<CMD>:Lspsaga outline<CR>', { desc = 'Outline' }) -- option+f12
+vim.keymap.set({ 'n' }, '<M-C-F12>', '<CMD>:Lspsaga outline<CR>', { desc = 'Outline' })
 
 vim.keymap.set({ 'n' }, '<F2>', '<CMD>:Lspsaga diagnostic_jump_next<CR>', { desc = 'Jump to next issue' })
 vim.keymap.set({ 'n' }, '<F14>', '<CMD>:Lspsaga diagnostic_jump_prev<CR>', { desc = 'Jump to previous issue' }) -- shift+F2
