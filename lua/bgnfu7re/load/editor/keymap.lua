@@ -17,7 +17,7 @@ vim.keymap.set({ 'n' }, '<M-F>', '<CMD>:Telescope live_grep<CR>', { desc = 'Live
 vim.keymap.set({ 'n' }, '<M-1>', '<CMD>:NvimTreeToggle<CR>', { desc = 'Toggle Nvim Tree' })
 vim.keymap.set({ 'n' }, '<F49>', '<CMD>:NvimTreeFindFile<CR>', { desc = 'Focus on file in Nvim Tree' })
 
-vim.keymap.set({ 'n' }, '<M-CR>', '<CMD>:Lspsaga code_action<CR>', { desc = 'Code action menu' })
+vim.keymap.set({ 'n' }, '<C-CR>', '<CMD>:Lspsaga code_action<CR>', { desc = 'Code action menu' })
 vim.keymap.set({ 'n' }, '<F1>', '<CMD>:Lspsaga hover_doc<CR>', { desc = 'Hover doc' })
 vim.keymap.set({ 'n', 'i' }, '<M-p>', vim.lsp.buf.signature_help, { desc = 'Show signature help' })
 vim.keymap.set({ 'n' }, '<M-Space>', '<CMD>:Lspsaga peek_definition<CR>', { desc = 'Peek definition' })

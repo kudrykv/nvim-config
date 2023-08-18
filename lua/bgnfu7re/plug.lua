@@ -1,70 +1,87 @@
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
+-- dependency for Telescope
+Plug('nvim-lua/plenary.nvim')
 
--- file tree with nicer icons
-Plug('nvim-tree/nvim-web-devicons')
-Plug('nvim-tree/nvim-tree.lua')
+-- TEXT EDIT -------------------------------------
+-- auto pairs
+Plug('jiangmiao/auto-pairs')
+-- automatic braces and quotes -- used previously
+-- Plug('m4xshen/autoclose.nvim')
 
 -- helper shortcuts for faster text surrounding (brackets, quotes, etc)
 Plug('tpope/vim-surround')
 
 -- commenter, because why do you need this out of the box, right?
 Plug('tpope/vim-commentary')
+--------------------------------------------------
 
--- automatic braces and quotes
-Plug('m4xshen/autoclose.nvim')
-
+-- UI --------------------------------------------
 -- scrollbar
 Plug('petertriho/nvim-scrollbar')
 
 -- split maximizer
 Plug('szw/vim-maximizer')
+--------------------------------------------------
 
+-- FILE TREE --------------------------------------
+-- file tree
+Plug('nvim-tree/nvim-web-devicons')
+Plug('nvim-tree/nvim-tree.lua')
+--------------------------------------------------
+
+-- GIT -------------------------------------------
 -- git highlights in the sign column
 Plug('lewis6991/gitsigns.nvim')
 
 -- manage git
 Plug('tpope/vim-fugitive')
+--------------------------------------------------
 
-Plug('nvim-lua/plenary.nvim') -- dependency for telescope
+-- SYNTAX TREE ------------------------------------
+-- something for better highlights, and also LSP
+
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- dependency for telescope
 Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.2' })
+--------------------------------------------------
 
--- LSP
+-- LSP -------------------------------------------
+-- LSP installer
 Plug('williamboman/mason.nvim')
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('neovim/nvim-lspconfig')
 
+-- LSP completion
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('hrsh7th/cmp-buffer')
 Plug('hrsh7th/cmp-path')
 Plug('hrsh7th/cmp-cmdline')
 Plug('hrsh7th/nvim-cmp')
 
+-- snippets
 Plug('L3MON4D3/LuaSnip')
 Plug('saadparwaiz1/cmp_luasnip')
 
--- code action in popup -- delete? enough-ly covered with lspsaga?
-Plug'weilbith/nvim-code-action-menu'
-
 -- UI fluff around LSP
 Plug('nvimdev/lspsaga.nvim')
+--------------------------------------------------
 
--- DAP
+-- DAP -------------------------------------------
 Plug('mfussenegger/nvim-dap')
 Plug('rcarriga/nvim-dap-ui')
 
 Plug('leoluz/nvim-dap-go')
+--------------------------------------------------
 
--- COC
--- Plug('neoclide/coc.nvim', { branch = 'release' })
-
--- theme
+-- THEMES ----------------------------------------
 Plug('sainnhe/everforest')
+--------------------------------------------------
 
+-- AI --------------------------------------------
 -- copilot
 Plug('github/copilot.vim')
+--------------------------------------------------
 
 vim.call('plug#end')
 
