@@ -6,9 +6,6 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('nvim-tree/nvim-tree.lua')
 
--- help in setting up and looking up shortcuts
-Plug('folke/which-key.nvim')
-
 -- helper shortcuts for faster text surrounding (brackets, quotes, etc)
 Plug('tpope/vim-surround')
 
