@@ -24,5 +24,5 @@ telescope.setup({
     lsp_dynamic_workspace_symbols = {
       theme = 'dropdown',
     },
-  }
+  },
 })
