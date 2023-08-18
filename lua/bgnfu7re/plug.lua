@@ -87,4 +87,3 @@ Plug('github/copilot.vim')
 --------------------------------------------------
 
 vim.call('plug#end')
-
