@@ -4,8 +4,25 @@ if not ok then
 end
 
 telescope.setup({
-  mappings = {
-    i = { }
+  pickers = {
+    buffers = {
+      theme = 'dropdown',
+    },
+
+    live_grep = {
+      theme = 'dropdown',
+    },
+
+    find_files = {
+      theme = 'dropdown',
+    },
+
+    commands = {
+      theme = 'dropdown',
+    },
+
+    lsp_dynamic_workspace_symbols = {
+      theme = 'dropdown',
+    },
   }
 })
-
