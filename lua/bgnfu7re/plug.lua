@@ -23,6 +23,9 @@ Plug('petertriho/nvim-scrollbar')
 
 -- split maximizer
 Plug('szw/vim-maximizer')
+
+-- status line
+Plug('nvim-lualine/lualine.nvim')
 --------------------------------------------------
 
 -- FILE TREE --------------------------------------
