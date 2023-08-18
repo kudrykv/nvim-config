@@ -24,7 +24,7 @@ opt.smartcase = true
 opt.cursorline = true
 
 -- "row with debug marks"
-opt.signcolumn = 'number'
+opt.signcolumn = 'yes' -- 'number'
 
 -- backspace
 opt.backspace = 'indent,eol,start'
