@@ -20,6 +20,10 @@ Plug('tpope/vim-commentary')
 Plug('Pocco81/auto-save.nvim')
 --------------------------------------------------
 
+-- NAVIGATION -------------------------------------
+-- motion
+Plug('ggandor/leap.nvim')
+
 -- UI --------------------------------------------
 -- scrollbar
 Plug('petertriho/nvim-scrollbar')
