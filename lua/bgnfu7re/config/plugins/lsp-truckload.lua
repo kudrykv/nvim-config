@@ -1,3 +1,4 @@
+---@diagnostic disable: redefined-local
 local ok, lspconfig = pcall(require, 'lspconfig')
 if not ok then
   return
@@ -18,15 +19,21 @@ if not ok then
   return
 end
 
+local ok, lspsaga = pcall(require, 'lspsaga')
+if not ok then
+  return
+end
+
 mason.setup()
 mason_lspconfig.setup()
+lspsaga.setup()
 
 mason_lspconfig.setup_handlers({
   function(server_name)
     local capabilities = cmpNvimLsp.default_capabilities()
 
     lspconfig[server_name].setup({
-      capabilities = capabilities ,
+      capabilities = capabilities,
     })
   end,
 
@@ -45,4 +52,3 @@ mason_lspconfig.setup_handlers({
     })
   end
 })
-
