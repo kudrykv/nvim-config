@@ -39,12 +39,6 @@ opt.splitbelow = true
 opt.clipboard:append('unnamedplus')
 
 -- theme
-vim.cmd('set tgc') -- termguicolors
--- vim.cmd('set background = light')
--- vim.g.everforest_better_performance = 1 -- no idea why no "better performance" out of the box
--- vim.g.everforest_background = 'hard'
--- vim.cmd('colorscheme everforest')
-
 vim.o.background = 'dark'
 vim.cmd('colorscheme gruvbox')
 

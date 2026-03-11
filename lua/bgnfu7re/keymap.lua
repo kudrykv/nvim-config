@@ -12,7 +12,7 @@ vim.keymap.set('n', '<C-S-o>', '<CMD>Telescope find_files<CR>', { desc = 'Find f
 vim.keymap.set('n', '<C-M-o>', '<CMD>Telescope lsp_dynamic_workspace_symbols<CR>', { desc = 'Find symbols' })
 
 -- FILE TREE -------------------------------------
-vim.keymap.set('n', '<M-1>', '<CMD>NvimTreeToggle<CR>', { desc = '(⌥+F1) Toggle file tree' })
+vim.keymap.set('n', '<M-1>', '<CMD>NvimTreeToggle<CR>', { desc = '(⌥+1) Toggle file tree' })
 
 -- FILE NAVIGATION -------------------------------
 
@@ -27,24 +27,3 @@ vim.keymap.set('n', '<Leader>gb', '<CMD>Gitsigns blame<CR>', { desc = 'Blame' })
 vim.keymap.set('n', '<C-k>', '<CMD>Git<CR>', { desc = 'Git (pre)Commit' })
 vim.keymap.set('n', '<Leader>gc', '<CMD>Git<CR>', { desc = 'Git -> (pre)Commit' })
 
--- LSP -------------------------------------------
-
-vim.keymap.set('n', '<C-M-l>', '<CMD>lua vim.lsp.buf.format()<CR>', { desc = 'Format' })
-vim.keymap.set('n', '<Leader>rf', '<CMD>lua vim.lsp.buf.format()<CR>', { desc = 'Refactor > Format' })
-vim.keymap.set('n', '<F18>', '<CMD>Lspsaga rename<CR><Esc>$', { desc = 'Rename' })
-vim.keymap.set('n', '<Leader>rr', '<CMD>Lspsaga rename<CR><Esc>$', { desc = 'Refactor > Rename' })
-
-vim.keymap.set('n', '<Leader>gd', '<CMD>lua vim.lsp.buf.definition()<CR>', { desc = 'Go to definition' })
-
-vim.keymap.set('n', '<F1>', '<CMD>lua vim.lsp.buf.hover()<CR>', { desc = 'Hover' })
-vim.keymap.set('n', '<Leader>ih', '<CMD>lua vim.lsp.buf.hover()<CR>', { desc = 'Info > Hover' })
-vim.keymap.set('n', '<M-C-F7>', '<CMD>Lspsaga finder<CR>', { desc = 'Finder' })
-vim.keymap.set('n', '<Leader>if', '<CMD>Lspsaga finder<CR>', { desc = 'Info > Finder' })
-vim.keymap.set('n', '<F36>', '<CMD>Lspsaga outline<CR>', { desc = 'Info > Outline' })
-vim.keymap.set('n', '<Leader>io', '<CMD>Lspsaga outline<CR>', { desc = 'Info > Outline' })
-vim.keymap.set('n', '<M-Space>', '<CMD>Lspsaga peek_definition<CR>', { desc = 'Peek definition' })
-vim.keymap.set('n', '<Leader>ip', '<CMD>Lspsaga peek_definition<CR>', { desc = 'Info > Peek definition' })
-vim.keymap.set('n', '<C-M-b>', '<CMD>Lspsaga goto_definition<CR>', { desc = 'Go to definition' })
-vim.keymap.set('n', '<Leader>id', '<CMD>Lspsaga goto_definition<CR>', { desc = 'Info > Definition' })
-vim.keymap.set('n', '<C-CR>', '<CMD>Lspsaga code_action<CR>', { desc = 'Code action' })
-vim.keymap.set('n', '<Leader>ia', '<CMD>Lspsaga code_action<CR>', { desc = 'Info > Code action' })
