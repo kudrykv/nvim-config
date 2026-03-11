@@ -21,9 +21,6 @@ opt.smartcase = true
 opt.cursorline = true
 opt.colorcolumn = '121'
 
--- "row with debug marks"
-opt.signcolumn = 'yes' -- 'number'
-
 -- backspace
 opt.backspace = 'indent,eol,start'
 
@@ -44,5 +41,12 @@ vim.cmd('colorscheme gruvbox')
 
 vim.diagnostic.config({
   update_in_insert = true,
+})
+
+-- because apparently it can't be automatic, can it?
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
 })
 

@@ -9,7 +9,6 @@ vim.keymap.set('n', '<C-`>', '<CMD>Telescope colorscheme<CR>', { desc = 'Change 
 vim.keymap.set('n', '<C-S-a>', '<CMD>Telescope commands<CR>', { desc = 'Commands' })
 vim.keymap.set('n', '<C-S-e>', '<CMD>Telescope oldfiles<CR>', { desc = 'Recently opened files' })
 vim.keymap.set('n', '<C-S-o>', '<CMD>Telescope find_files<CR>', { desc = 'Find files' })
-vim.keymap.set('n', '<C-M-o>', '<CMD>Telescope lsp_dynamic_workspace_symbols<CR>', { desc = 'Find symbols' })
 
 -- FILE TREE -------------------------------------
 vim.keymap.set('n', '<M-1>', '<CMD>NvimTreeToggle<CR>', { desc = '(⌥+1) Toggle file tree' })
