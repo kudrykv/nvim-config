@@ -22,6 +22,17 @@ Plug('tpope/vim-commentary') -- comment out code
 Plug('lewis6991/gitsigns.nvim')
 Plug('tpope/vim-fugitive')
 
+-- LSP -------------------------------------------
+Plug('mason-org/mason.nvim')           -- LSP server installer
+Plug('mason-org/mason-lspconfig.nvim') -- mason <-> lspconfig bridge
+Plug('neovim/nvim-lspconfig')          -- LSP configuration
+
+-- COMPLETION ------------------------------------
+Plug('hrsh7th/nvim-cmp')      -- completion engine
+Plug('hrsh7th/cmp-nvim-lsp')  -- LSP source for cmp
+Plug('hrsh7th/cmp-buffer')    -- buffer words source
+Plug('hrsh7th/cmp-path')      -- filesystem paths source
+
 -- THEMES ----------------------------------------
 Plug('sainnhe/everforest')
 Plug('ellisonleao/gruvbox.nvim')

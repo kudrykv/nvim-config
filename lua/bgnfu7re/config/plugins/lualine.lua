@@ -3,5 +3,5 @@ if not ok then
   return
 end
 
-lualine.setup()
+lualine.setup({})
 
