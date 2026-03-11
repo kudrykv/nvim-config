@@ -2,8 +2,6 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
-Plug('nathangrigg/vim-beancount')
-
 -- "low-level" shit
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })     -- syntax parser
 Plug('nvim-lua/plenary.nvim')                                         -- some helper funcs; required
