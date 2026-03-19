@@ -28,10 +28,10 @@ Plug('mason-org/mason-lspconfig.nvim') -- mason <-> lspconfig bridge
 Plug('neovim/nvim-lspconfig')          -- LSP configuration
 
 -- COMPLETION ------------------------------------
-Plug('hrsh7th/nvim-cmp')      -- completion engine
-Plug('hrsh7th/cmp-nvim-lsp')  -- LSP source for cmp
-Plug('hrsh7th/cmp-buffer')    -- buffer words source
-Plug('hrsh7th/cmp-path')      -- filesystem paths source
+Plug('hrsh7th/nvim-cmp')     -- completion engine
+Plug('hrsh7th/cmp-nvim-lsp') -- LSP source for cmp
+Plug('hrsh7th/cmp-buffer')   -- buffer words source
+Plug('hrsh7th/cmp-path')     -- filesystem paths source
 
 -- THEMES ----------------------------------------
 Plug('sainnhe/everforest')
